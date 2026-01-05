@@ -41,3 +41,8 @@
 text-decoration: none;
 color: white;
 }
+
+#myvideo {
+    width: 100%;
+    height: 100vh;
+}
