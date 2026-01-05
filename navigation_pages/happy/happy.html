@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>happy Vova</title>
+        <link rel="stylesheet" href="/css/happy.css">
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -20px;
+            user-select: none;
+            cursor: default;
+            z-index: 1000;
+            animation-name: fall;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(105vh) rotate(360deg);
+                opacity: 0.3;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <script>
+    const snowflakes = ['😁', '🔞', '💦', '🍑', '🍆'];
+    const count = 120;
+
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        
+        snowflake.innerText = snowflakes[Math.floor(Math.random() * snowflakes.length)];
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.fontSize = (Math.random() * 10 + 50) + 'px';
+        snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's'; 
+        snowflake.style.opacity = Math.random();
+        
+        document.body.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, 5000);
+    }
+
+    setInterval(createSnowflake, 200);
+</script>
+        <main class="auf">
+            <div class="image-container">
+                <img src="/img/auf.jpg" alt="happy">
+                <a href="/navigation_pages/happy/happy-vova.html"
+                    class="happy-vova"><img src="/img/icon/Gemini_Generated_Image_dc1rm7dc1rm7dc1r.png" alt="happy"></a>
+            </div>
+        </main>
+    </body>
+</html>
